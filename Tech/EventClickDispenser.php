@@ -61,7 +61,6 @@ function loadMapConf($cache)
 function dispense($components)
 {
 	$map = loadMapConf($components['Cache']);
-	$conetent = $components['WeiXin']->msg['Content'];
 	$key = $components['WeiXin']->msg['EventKey'];
 	$cf = load($key, $map);
 	$cf[0]->requestInfo['Msg'] = $components['WeiXin']->msg;
